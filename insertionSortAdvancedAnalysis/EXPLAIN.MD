@@ -1,0 +1,3 @@
+So the problem is asking me to count how many shifts insertion sort would make. Instead of actually running insertion sort step by step, I realized that every shift is basically an inversion in the array. An inversion just means a pair of numbers that are out of order — like if a bigger number comes before a smaller one.
+
+So the trick is: if I can count all the inversions, I already know the total shifts. Doing it with a normal loop would be too slow, so I use merge sort. Merge sort not only sorts the array, but while merging, I can count how many elements from the left side are bigger than the ones on the right side. That count is exactly the number of shifts.
